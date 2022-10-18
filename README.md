@@ -7,6 +7,10 @@ The code runs on Python 3.6.4 with PyTorch 1.0.1.post2 and torchvision 0.2.2.
 First download the dataset from https://drive.google.com/drive/folders/1lCFGizQetXrO9nj4Mee1JJJE_KN3fTBl?usp=sharing, and save it in the /data/ folder.
 One can also generate IRS channel data from other open source Repo. like: https://github.com/XML124/CDRN-channel-estimation-IRS.
 
+Please use Anaconda to install all the dependencies:
+
+`conda env create -f environment.yml`
+
 You can run the following command to run our code to train a neuranl network for Channel Estimation in IRS-Aided Communication System Without Ground Truth, and save the results in the /results/ folder.
 
 `nohup python main.py --data_dir ../Data/ --log_dir ../logs/ -c configs/channel_estimation.yaml --ckpt_dir ~/.cache/ --hide_progress --method sim_x --SNR 0.0 --std 0.5 `
