@@ -1,0 +1,43 @@
+name: IRS-channel-estimation-experiment
+dataset:
+  name: IRS
+  image_size: 32
+  num_workers: 4
+
+model:
+  name: IRS_CE_model
+  backbone: channel_estimation_variant1
+  proj_layers: 2
+
+train:
+  optimizer:
+    name: sgd
+    weight_decay: 0.005
+    momentum: 0.9
+  warmup_epochs: 10
+  warmup_lr: 0
+  base_lr: 0.01
+  final_lr: 0
+  num_epochs: 800
+  stop_at_epoch: 800
+  batch_size: 512
+  knn_monitor: True
+  knn_interval: 1
+  knn_k: 200
+eval:
+  optimizer:
+    name: sgd
+    weight_decay: 0
+    momentum: 0.9
+  warmup_lr: 0
+  warmup_epochs: 0
+  base_lr: 30
+  final_lr: 0
+  batch_size: 256
+  num_epochs: 100
+
+logger:
+  tensorboard: True
+  matplotlib: True
+
+seed: null
