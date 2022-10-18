@@ -1,6 +1,6 @@
 # SSL-Based-IRS-Channel-Estimation
 
-This repository implements the "A Self-Supervised Learning-Based Channel Estimation for IRS-Aided Communication Without Ground Truth". 
+This repository implements "A Self-Supervised Learning-Based Channel Estimation for IRS-Aided Communication Without Ground Truth". 
 The code runs on Python 3.9.7 with PyTorch 1.9.1 and torchvision 0.10.1.
 
 
